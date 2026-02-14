@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leon-rg@terminal:~$ whoami</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Boot Sequence -->
+    <div class="boot-overlay" id="bootOverlay">
+        <div class="boot-content">
+            <div class="boot-line">BIOS Version 4.2.0</div>
+            <div class="boot-line">Initializing system...</div>
+            <div class="boot-line">Loading kernel modules... <span class="ok-status">[OK]</span></div>
+            <div class="boot-line">Mounting file systems... <span class="ok-status">[OK]</span></div>
+            <div class="boot-line">Starting network services... <span class="ok-status">[OK]</span></div>
+            <div class="boot-line">Checking disk integrity... <span class="ok-status">[OK]</span></div>
+            <div class="boot-line">Loading leon-rg profile...</div>
+            <div class="boot-line">
+                <span class="progress-bar">
+                    <span class="progress-fill"></span>
+                </span>
+                <span class="progress-text">100%</span>
+            </div>
+            <div class="boot-line boot-complete">System ready. Welcome to leon-rg terminal.</div>
+            <div class="boot-line press-key">Press any key to continue_</div>
+        </div>
+    </div>
+
+    <div class="scanline"></div>
+    
+    <div class="terminal-container" id="mainContent">
+        <!-- Header Terminal -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button btn-close"></span>
+                <span class="terminal-button btn-minimize"></span>
+                <span class="terminal-button btn-maximize"></span>
+                <span class="terminal-title">leon-rg@github: ~</span>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">cat welcome.txt</span>
+                </div>
+                
+                <div class="ascii-art">
+ ██▓    ▓█████  ▒█████   ███▄    █     ██▀███    ▄████ 
+▓██▒    ▓█   ▀ ▒██▒  ██▒ ██ ▀█   █    ▓██ ▒ ██▒ ██▒ ▀█▒
+▒██░    ▒███   ▒██░  ██▒▓██  ▀█ ██▒   ▓██ ░▄█ ▒▒██░▄▄▄░
+▒██░    ▒▓█  ▄ ▒██   ██░▓██▒  ▐▌██▒   ▒██▀▀█▄  ░▓█  ██▓
+░██████▒░▒████▒░ ████▓▒░▒██░   ▓██░   ░██▓ ▒██▒░▒▓███▀▒
+░ ▒░▓  ░░░ ▒░ ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒    ░ ▒▓ ░▒▓░ ░▒   ▒ 
+░ ░ ▒  ░ ░ ░  ░  ░ ▒ ▒░ ░ ░░   ░ ▒░     ░▒ ░ ▒░  ░   ░ 
+  ░ ░      ░   ░ ░ ░ ▒     ░   ░ ░      ░░   ░ ░ ░   ░ 
+    ░  ░   ░  ░    ░ ░           ░       ░           ░ 
+                </div>
+
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">whoami</span>
+                </div>
+                
+                <div class="output">
+                    <p><strong style="color: var(--terminal-yellow);">Name:</strong> Leo</p>
+                    <p><strong style="color: var(--terminal-yellow);">Role:</strong> Developer & Curious Mind 🐧</p>
+                    <p><strong style="color: var(--terminal-yellow);">Bio:</strong> Just another person who enjoys coding. I create things in my free time—not always perfect, but always with passion.</p>
+                    <p><strong style="color: var(--terminal-yellow);">Location:</strong> UTC -05:00</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">ls -la skills/</span>
+                </div>
+
+                <div class="output">
+                    <div style="margin-top: 15px;">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button btn-close"></span>
+                <span class="terminal-button btn-minimize"></span>
+                <span class="terminal-button btn-maximize"></span>
+                <span class="terminal-title">stats --summary</span>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">git stats --all</span>
+                </div>
+
+                <div class="stats-container" id="statsContainer">
+                    <div class="stat-box">
+                        <div class="stat-value" id="repoCount">...</div>
+                        <div class="stat-label">Public Repos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="starsCount">...</div>
+                        <div class="stat-label">Total Stars</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Ideas Brewing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects-->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button btn-close"></span>
+                <span class="terminal-button btn-minimize"></span>
+                <span class="terminal-button btn-maximize"></span>
+                <span class="terminal-title">projects --list</span>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">fetch repositories --user=leon-rg</span>
+                </div>
+
+                <div class="output" id="loadingMessage">
+                    <p style="color: var(--terminal-yellow);">⏳ Fetching repositories from GitHub API...</p>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">echo "Always learning and building..."</span>
+                </div>
+                
+                <div class="output">
+                    <p style="color: var(--terminal-purple);">⏳ Check back later for updates!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-button btn-close"></span>
+                <span class="terminal-button btn-minimize"></span>
+                <span class="terminal-button btn-maximize"></span>
+                <span class="terminal-title">contact.sh</span>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">./contact.sh --social</span>
+                </div>
+
+                <div class="output">
+                    <p><strong style="color: var(--terminal-yellow);">📧 GitHub:</strong> <a href="https://github.com/leon-rg" target="_blank">@leon-rg</a></p>
+                    <p><strong style="color: var(--terminal-yellow);">💬 Discord:</strong> Available on profile</p>
+                    <p style="margin-top: 20px; color: var(--text-secondary);">
+                        Feel free to explore my repositories, star projects you find interesting, or reach out for collaborations!
+                    </p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="command-line">
+                    <span class="prompt">leon-rg@github:~$</span>
+                    <span class="command">echo "Thanks for stopping by!"</span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary); font-size: 12px;">
+            <p>© 2026 leon-rg • Built with passion and caffeine ☕</p>
+            <p style="margin-top: 10px;">
+                <span style="color: var(--terminal-green);">█</span> System Status: Online
+            </p>
+            <p style="margin-top: 5px; font-size: 10px;">
+                Auto-updated from GitHub API
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
